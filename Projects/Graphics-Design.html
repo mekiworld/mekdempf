@@ -30,7 +30,53 @@
     <meta property="og:title" content="Graphics Design">
     <meta property="og:description" content="">
     <meta property="og:type" content="website">
-  </head>
+  <script src="https://www.google.com/recaptcha/api.js?render=6LeMaaEcAAAAAKgWqvjYMWXxNOBkLlvdVmv60zOS"></script>
+    <script>
+( function( grecaptcha, sitekey, actions ) {
+
+	var recaptcha = {
+
+		execute: function( action ) {
+			grecaptcha.execute(
+				sitekey,
+				{ action: action }
+			).then( function( token ) {
+				var forms = document.getElementsByTagName( 'form' );
+
+				for ( var i = 0; i < forms.length; i++ ) {
+					var fields = forms[ i ].getElementsByTagName( 'input' );
+
+					for ( var j = 0; j < fields.length; j++ ) {
+						var field = fields[ j ];
+
+						if ( 'recaptchaResponse' === field.getAttribute( 'name' ) ) {
+							field.setAttribute( 'value', token );
+							break;
+						}
+					}
+				}
+			} );
+		},
+
+		executeContact: function() {
+			recaptcha.execute( actions[ 'contact' ] );
+		}
+	};
+
+	grecaptcha.ready(
+		recaptcha.executeContact
+	);
+
+	document.addEventListener( 'change',
+		recaptcha.executeContact, false
+	);
+} )(
+	grecaptcha,
+	'6LeMaaEcAAAAAKgWqvjYMWXxNOBkLlvdVmv60zOS',
+	{"contact":"contact"}
+);
+    </script>
+</head>
   <body class="u-body"><header class="u-align-center-sm u-align-center-xs u-clearfix u-grey-90 u-header u-sticky u-sticky-0ec5 u-header" id="sec-fdd9"><div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
         <a href="https://nicepage.com" class="u-image u-logo u-image-1" data-image-width="719" data-image-height="1000">
           <img src="../images/MAwhite.png" class="u-logo-image u-logo-image-1">
@@ -55,14 +101,14 @@
           </div>
           <div class="u-custom-menu u-nav-container">
             <ul class="u-nav u-spacing-20 u-unstyled u-nav-1"><li class="u-nav-item"><a class="u-border-active-palette-1-base u-border-hover-palette-1-base u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base u-text-white" href="../Home.html" style="padding: 10px;">Home</a>
-</li><li class="u-nav-item"><a class="u-border-active-palette-1-base u-border-hover-palette-1-base u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base u-text-white" href="../Home.html#sec-3f1e" data-page-id="2713420623" style="padding: 10px;">My services</a>
-</li><li class="u-nav-item"><a class="u-border-active-palette-1-base u-border-hover-palette-1-base u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base u-text-white" href="../Home.html#carousel_12b6" data-page-id="2713420623" style="padding: 10px;">Projects</a><div class="u-nav-popup"><ul class="u-h-spacing-20 u-nav u-unstyled u-v-spacing-10 u-nav-2"><li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="Photography.html">Photography</a>
+</li><li class="u-nav-item"><a class="u-border-active-palette-1-base u-border-hover-palette-1-base u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base u-text-white" href="Home.html#sec-3f1e" data-page-id="2713420623" style="padding: 10px;">My services</a>
+</li><li class="u-nav-item"><a class="u-border-active-palette-1-base u-border-hover-palette-1-base u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base u-text-white" href="Home.html#carousel_12b6" data-page-id="2713420623" style="padding: 10px;">Projects</a><div class="u-nav-popup"><ul class="u-h-spacing-20 u-nav u-unstyled u-v-spacing-10 u-nav-2"><li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="Photography.html">Photography</a>
 </li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="Graphics-Design.html">Graphics Design</a>
 </li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="Videography.html">Videography</a>
 </li></ul>
 </div>
-</li><li class="u-nav-item"><a class="u-border-active-palette-1-base u-border-hover-palette-1-base u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base u-text-white" href="../Home.html#sec-fe67" data-page-id="2713420623" style="padding: 10px;">About me</a>
-</li><li class="u-nav-item"><a class="u-border-active-palette-1-base u-border-hover-palette-1-base u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base u-text-white" href="../Home.html#carousel_b8d1" data-page-id="2713420623" style="padding: 10px;">Contact</a>
+</li><li class="u-nav-item"><a class="u-border-active-palette-1-base u-border-hover-palette-1-base u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base u-text-white" href="Home.html#sec-fe67" data-page-id="2713420623" style="padding: 10px;">About me</a>
+</li><li class="u-nav-item"><a class="u-border-active-palette-1-base u-border-hover-palette-1-base u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base u-text-white" href="Home.html#carousel_b8d1" data-page-id="2713420623" style="padding: 10px;">Contact</a>
 </li></ul>
           </div>
           <div class="u-custom-menu u-nav-container-collapse">
@@ -70,14 +116,14 @@
               <div class="u-inner-container-layout u-sidenav-overflow">
                 <div class="u-menu-close"></div>
                 <ul class="u-align-center u-nav u-popupmenu-items u-unstyled u-nav-3"><li class="u-nav-item"><a class="u-button-style u-nav-link" href="../Home.html" style="padding: 10px;">Home</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="../Home.html#sec-3f1e" data-page-id="2713420623" style="padding: 10px;">My services</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="../Home.html#carousel_12b6" data-page-id="2713420623" style="padding: 10px;">Projects</a><div class="u-nav-popup"><ul class="u-h-spacing-20 u-nav u-unstyled u-v-spacing-10 u-nav-4"><li class="u-nav-item"><a class="u-button-style u-nav-link" href="Photography.html">Photography</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="Home.html#sec-3f1e" data-page-id="2713420623" style="padding: 10px;">My services</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="Home.html#carousel_12b6" data-page-id="2713420623" style="padding: 10px;">Projects</a><div class="u-nav-popup"><ul class="u-h-spacing-20 u-nav u-unstyled u-v-spacing-10 u-nav-4"><li class="u-nav-item"><a class="u-button-style u-nav-link" href="Photography.html">Photography</a>
 </li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="Graphics-Design.html">Graphics Design</a>
 </li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="Videography.html">Videography</a>
 </li></ul>
 </div>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="../Home.html#sec-fe67" data-page-id="2713420623" style="padding: 10px;">About me</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="../Home.html#carousel_b8d1" data-page-id="2713420623" style="padding: 10px;">Contact</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="Home.html#sec-fe67" data-page-id="2713420623" style="padding: 10px;">About me</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="Home.html#carousel_b8d1" data-page-id="2713420623" style="padding: 10px;">Contact</a>
 </li></ul>
               </div>
             </div>
@@ -86,9 +132,10 @@
         </nav>
       </div></header>
     <section class="u-align-center u-clearfix u-grey-30 u-section-1" id="carousel_faf8">
-      <div class="u-clearfix u-sheet u-valign-middle-xl u-sheet-1">
-        <h2 class="u-text u-text-default-lg u-text-default-md u-text-default-sm u-text-default-xl u-text-1">LOGO PROJECTS</h2>
-        <div class="u-gallery u-hidden-xs u-layout-grid u-lightbox u-show-text-on-hover u-gallery-1">
+      <div class="u-clearfix u-sheet u-valign-middle-md u-valign-middle-sm u-sheet-1">
+        <h2 class="u-text u-text-1">Graphics <span class="u-text-palette-2-base">Design </span>Projects
+        </h2>
+        <div class="u-expanded-width-sm u-expanded-width-xl u-expanded-width-xs u-gallery u-layout-grid u-lightbox u-show-text-on-hover u-gallery-1">
           <div class="u-gallery-inner u-gallery-inner-1">
             <div class="u-effect-fade u-gallery-item">
               <div class="u-back-slide" data-image-width="1500" data-image-height="1000">
@@ -113,7 +160,7 @@
                 <img class="u-back-image u-expanded" src="../images/15.5Widthx19Depthx14.5Height.png" alt="shopping bag">
               </div>
               <div class="u-over-slide u-shading u-valign-middle u-over-slide-3">
-                <h3 class="u-gallery-heading" style="text-transform: uppercase;">shopping box</h3>
+                <h3 class="u-gallery-heading" style="text-transform: uppercase;">shopping bag</h3>
                 <p class="u-gallery-text"></p>
               </div>
             </div>
@@ -122,7 +169,7 @@
                 <img class="u-back-image u-expanded" src="../images/LogoMockupSportJersey.png" alt="luxury black facade">
               </div>
               <div class="u-over-slide u-shading u-valign-middle u-over-slide-4">
-                <h3 class="u-gallery-heading" style="text-transform: uppercase;">minimalistic design</h3>
+                <h3 class="u-gallery-heading" style="text-transform: uppercase;">luxury black facade</h3>
                 <p class="u-gallery-text"></p>
               </div>
             </div>
@@ -131,7 +178,7 @@
                 <img class="u-back-image u-expanded" src="../images/logosilver.png" alt="minimalistic design">
               </div>
               <div class="u-over-slide u-shading u-valign-middle u-over-slide-5">
-                <h3 class="u-gallery-heading" style="text-transform: uppercase;">luxury black facade</h3>
+                <h3 class="u-gallery-heading" style="text-transform: uppercase;">minimalistic design</h3>
                 <p class="u-gallery-text"></p>
               </div>
             </div>
@@ -143,19 +190,44 @@
                 <h3 class="u-gallery-heading" style="text-transform: uppercase;">mockup with logo</h3>
                 <p class="u-gallery-text"></p>
               </div>
-
             </div>
-            
+            <div class="u-effect-fade u-gallery-item">
+              <div class="u-back-slide" data-image-width="1161" data-image-height="1600">
+                <img class="u-back-image u-expanded u-image-contain" src="../images/h4.png" alt="Poster">
+              </div>
+              <div class="u-over-slide u-shading u-valign-middle u-over-slide-7">
+                <h3 class="u-gallery-heading" style="text-transform: uppercase;">Poster</h3>
+                <p class="u-gallery-text"></p>
+              </div>
+            </div>
+            <div class="u-effect-fade u-gallery-item">
+              <div class="u-back-slide" data-image-width="918" data-image-height="1280">
+                <img class="u-back-image u-expanded u-image-contain" src="../images/photo_2021-10-02_01-17-45.jpg" alt="Poster">
+              </div>
+              <div class="u-over-slide u-shading u-valign-middle u-over-slide-8">
+                <h3 class="u-gallery-heading" style="text-transform: uppercase;">Poster</h3>
+                <p class="u-gallery-text"></p>
+              </div>
+            </div>
+            <div class="u-effect-fade u-gallery-item">
+              <div class="u-back-slide" data-image-width="1131" data-image-height="1600">
+                <img class="u-back-image u-expanded u-image-contain" src="../images/HL2.png" alt="poster">
+              </div>
+              <div class="u-over-slide u-shading u-valign-middle u-over-slide-9">
+                <h3 class="u-gallery-heading" style="text-transform: uppercase;">poster</h3>
+                <p class="u-gallery-text"></p>
+              </div>
+            </div>
           </div>
         </div>
         <div class="u-rotation-parent u-rotation-parent-1">
           <img class="u-flip-horizontal u-flip-vertical u-hidden-sm u-image u-image-default u-rotate-180 u-image-1" src="../images/btpf.png" alt="" data-image-width="315" data-image-height="1600">
         </div>
         <div class="u-rotation-parent u-rotation-parent-2">
-          <img class="u-flip-horizontal u-flip-vertical u-image u-image-default u-rotate-180 u-image-2" src="../images/nazulogoPF.png" alt="" data-image-width="2719" data-image-height="18750">
+          <img class="u-flip-horizontal u-flip-vertical u-hidden-sm u-image u-image-default u-rotate-180 u-image-2" src="../images/nazulogoPF.png" alt="" data-image-width="2719" data-image-height="18750">
         </div>
-        <a href="videography.html" class="u-active-black u-align-center u-border-1 u-border-active-black u-border-black u-border-hover-black u-btn u-button-style u-hover-black u-none u-text-active-white u-text-black u-text-hover-white u-btn-1">view more</a>
-
+        <a href="projects/videography.html" class="u-border-2 u-border-black u-btn u-button-style u-hover-black u-none u-text-black u-text-hover-white u-btn-1">Next&nbsp;<span class="u-icon"><svg class="u-svg-content" viewBox="0 0 512 512" x="0px" y="0px" style="width: 1em; height: 1em;"><path d="M506.134,241.843c-0.006-0.006-0.011-0.013-0.018-0.019l-104.504-104c-7.829-7.791-20.492-7.762-28.285,0.068 c-7.792,7.829-7.762,20.492,0.067,28.284L443.558,236H20c-11.046,0-20,8.954-20,20c0,11.046,8.954,20,20,20h423.557 l-70.162,69.824c-7.829,7.792-7.859,20.455-0.067,28.284c7.793,7.831,20.457,7.858,28.285,0.068l104.504-104 c0.006-.006,0.011-.013,0.018-.019C513.968,262.339,513.943,249.635,506.134,241.843z"></path></svg><img></span>
+        </a>
       </div>
     </section>
     <style class="u-overlap-style">.u-overlap:not(.u-sticky-scroll) .u-header {
@@ -164,7 +236,7 @@ background-color: #1a1a1a !important
     
     
     <footer class="u-align-center u-clearfix u-footer u-grey-80 u-footer" id="sec-183c"><div class="u-clearfix u-sheet u-sheet-1">
-        <p class="u-small-text u-text u-text-variant u-text-1"> Created By Mekdem Alemu|&nbsp; &nbsp; &nbsp; &nbsp;<br>&nbsp; 2021 All rights reserved.
+        <p class="u-small-text u-text u-text-variant u-text-1"> Created By Mekdem Alemu&nbsp; &nbsp; &nbsp;&nbsp;<br>&nbsp; 2021 All rights reserved.
         </p><span class="u-icon u-icon-circle u-icon-1"><svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 367.467 367.467" style=""><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-3960"></use></svg><svg class="u-svg-content" viewBox="0 0 367.467 367.467" x="0px" y="0px" id="svg-3960" style="enable-background:new 0 0 367.467 367.467;"><g><path d="M183.73,0.018C82.427,0.018,0,82.404,0,183.733c0,101.289,82.427,183.716,183.73,183.716   c101.315,0,183.737-82.427,183.737-183.716C367.467,82.404,285.045,0.018,183.73,0.018z M183.73,326.518   c-78.743,0-142.798-64.052-142.798-142.784c0-78.766,64.055-142.817,142.798-142.817c78.752,0,142.807,64.052,142.807,142.817   C326.536,262.466,262.481,326.518,183.73,326.518z"></path><path d="M244.036,217.014c-11.737,20.141-33.562,32.635-56.956,32.635c-36.329,0-65.921-29.585-65.921-65.915   c0-36.36,29.592-65.955,65.921-65.955c23.395,0,45.219,12.54,56.956,32.641l1.517,2.627h44.28l-2.658-7.129   c-7.705-20.413-21.225-37.769-39.122-50.157c-17.942-12.42-39.017-19.009-60.973-19.009c-58.981,0-106.946,48.006-106.946,106.982   c0,58.98,47.965,106.941,106.946,106.941c21.956,0,43.03-6.567,60.973-19.006c17.897-12.391,31.417-29.741,39.122-50.154   l2.658-7.133h-44.28L244.036,217.014z"></path>
 </g></svg></span>
       </div></footer><span style="height: 64px; width: 64px; margin-left: 0px; margin-right: auto; margin-top: 0px; background-image: none; right: 20px; bottom: 20px" class="u-back-to-top u-icon u-icon-circle u-opacity u-opacity-85 u-palette-1-base u-spacing-15" data-href="#">
